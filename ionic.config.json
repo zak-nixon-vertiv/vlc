@@ -1,0 +1,7 @@
+{
+  "name": "vlc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
