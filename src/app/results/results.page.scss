@@ -1,0 +1,143 @@
+.container{
+  height:100%;
+}
+
+.header{
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  background-color: grey;
+
+  .serial-number-area{
+    width: 100%;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+
+    span:nth-child(1){
+      font-weight: normal;
+      font-size: 0.8em;
+      color:#333d;
+    }
+    span:nth-child(2){
+      font-weight: bold;
+      font-size: 1.2em;
+      color:black;
+    }
+
+  }
+  .export-area{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+
+    ion-button{
+      width:75px;
+      color:blue;
+      box-shadow: 0px 0px transparent;
+    }
+  }
+}
+
+.total-item{
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+
+  .total-image-container{
+    width:18px;
+    height:18px;
+    position: relative;
+    margin-top:8px;
+
+    .circle-thing{
+      position: absolute;
+      width:100%;
+      height:100%;
+      border:1px solid var(--ion-color-primary);
+      border-radius: 20px;
+      top:3px;
+      left:0;
+    }
+
+    .line-in-circle{
+      position: absolute;
+      width:55%;
+      height:140%;
+      top:0;
+      left:0;
+      z-index: 10;
+      border-right:1px solid var(--ion-color-primary);
+    }
+  }
+
+
+  .total-title{
+    display: flex;
+    justify-content: center;
+    width:20%;
+    padding-top:10px;
+    .heading{
+      font-weight: bold;
+      color: var(--ion-color-primary);
+    }
+  }
+
+  .results{
+    width: 80%;
+  }
+}
+
+.unit{
+  color:var(--ion-background-color);
+}
+
+.value{
+  font-weight:bold;
+  color:var(--ion-background-color);
+}
+
+.circuit-number{
+  color:var(--ion-color-primary);
+  font-weight: bold;
+}
+
+.circuit-image{
+  display:flex;
+  flex-direction: column;
+
+  .top-line, .bottom-line{
+    height:30%;
+    border-left:1px solid var(--ion-color-primary);
+  }
+
+  .arc-container{
+    position: relative;
+    height:40%;
+
+    .arc{
+      position:absolute;
+      top:0;
+      left:-2px;
+      height:100%;
+      width:10px;
+      border-radius: 50%;
+      border:1px solid var(--ion-color-primary);
+    }
+
+    .half-arc-box{
+      position: absolute;
+      top:0;
+      left:-2px;
+      width:5px;
+      height:100%;
+      background:var(--ion-item-background);
+      z-index: 100;
+    }
+  }
+
+}
+
+

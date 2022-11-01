@@ -1,0 +1,14 @@
+.terms-area{
+  width:100%;
+  border:1px solid red;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction:column;
+
+  &:nth-child(1){
+    border:1px solid green;
+  }
+}
+
+

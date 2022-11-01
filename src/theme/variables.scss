@@ -1,10 +1,11 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #cb5f07;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -74,6 +75,8 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  --ion-toolbar-background: #919191;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,7 +86,7 @@
    */
 
   body {
-    --ion-color-primary: #428cff;
+    --ion-color-primary: #dc6e10;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
     --ion-color-primary-contrast-rgb: 255,255,255;
@@ -145,6 +148,7 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
   }
 
   /*
@@ -153,7 +157,7 @@
    */
 
   .ios body {
-    --ion-background-color: #000000;
+    --ion-background-color: #3f3f3f;
     --ion-background-color-rgb: 0,0,0;
 
     --ion-text-color: #ffffff;
@@ -179,14 +183,15 @@
     --ion-color-step-900: #e6e6e6;
     --ion-color-step-950: #f2f2f2;
 
-    --ion-item-background: #000000;
+    --ion-item-background: #a9abad;
 
     --ion-card-background: #1c1c1d;
+    --ion-toolbar-background: #919191;
   }
 
   .ios ion-modal {
     --ion-background-color: var(--ion-color-step-100);
-    --ion-toolbar-background: var(--ion-color-step-150);
+    --ion-toolbar-background: #919191;
     --ion-toolbar-border-color: var(--ion-color-step-250);
   }
 
@@ -225,9 +230,9 @@
     --ion-color-step-900: #e7e7e7;
     --ion-color-step-950: #f3f3f3;
 
-    --ion-item-background: #1e1e1e;
+    --ion-item-background: purple;
 
-    --ion-toolbar-background: #1f1f1f;
+    --ion-toolbar-background: #919191;
 
     --ion-tab-bar-background: #1f1f1f;
 

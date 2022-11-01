@@ -1,0 +1,37 @@
+
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" ></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="processResults()">
+        <ion-icon slot="icon-only" name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Scanning</ion-title>
+  </ion-toolbar>
+  <div class="container">
+    <div id="instructions">
+      <p>Align IMD dislay within lines.</p>
+    </div>
+
+    <div class="preview-container">
+      <div id="indicator-bar-container">
+        <div id="indicator-bars"></div>
+      </div>
+      <div class="imagePreview" >
+        <img [src]='imagePath' style="height: 65px;width:100%;">
+      </div>
+      <canvas #imageCanvas id="canvas">
+
+      </canvas>
+    </div>
+
+<!--    <div id="image-controls-container">-->
+<!--      <ion-range min="0" max="100" step="1" snaps="true" ticks="false" color="secondary" (ionChange)="updateBrightness($event)"></ion-range>-->
+<!--    </div>-->
+  </div>
+</ion-content>
+
+

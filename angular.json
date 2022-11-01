@@ -26,13 +26,20 @@
                 "output": "assets"
               },
               {
+                "glob": "**/*",
+                "input": "src/assets/lang-data",
+                "output": "assets/lang-data"
+              },
+              {
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
               }
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
-            "scripts": [],
+            "scripts":[
+
+            ],
             "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,
@@ -98,7 +105,9 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "styles": [],
-            "scripts": [],
+            "scripts": [
+              "node_modules/caman"
+            ],
             "assets": [
               {
                 "glob": "favicon.ico",

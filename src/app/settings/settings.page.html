@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="results" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+
+  <div class="container">
+
+    <ion-list lines="none" style="border:1px solid white;">
+
+      <ion-item>
+        <ion-label>Collapse Rows</ion-label>
+        <ion-toggle slot="end" [(ngModel)]="collapseRows"></ion-toggle>
+      </ion-item>
+
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label>Unit Data to Display</ion-label>
+        </ion-item-divider>
+        <ion-item>
+          <ion-label>Amps</ion-label>
+          <ion-toggle slot="end" [(ngModel)]="showAmps"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>Watts</ion-label>
+          <ion-toggle slot="end" [(ngModel)]="showWatts"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>Volts</ion-label>
+          <ion-toggle slot="end" [(ngModel)]="showVolts"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>VA</ion-label>
+          <ion-toggle slot="end" [(ngModel)]="showVoltAmps"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>kWh</ion-label>
+          <ion-toggle slot="end" [(ngModel)]="showKiloVolts"></ion-toggle>
+        </ion-item>
+      </ion-item-group>
+
+    </ion-list>
+    <div class="terms-area">
+      <div>Legal</div>
+      <div>Terms and Conditions</div>
+    </div>
+  </div>
+</ion-content>
+
+
+

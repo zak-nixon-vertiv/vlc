@@ -1,0 +1,121 @@
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="scanner" ></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="openSettings()">
+        <ion-icon slot="icon-only" name="settings" class="standard-button"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Results</ion-title>
+  </ion-toolbar>
+  <div class="container" *ngIf="result">
+
+   <div class="header">
+     <div class="serial-number-area">
+        <span>Serial Number</span>
+        <span>{{result.serialNumber}}</span>
+     </div>
+     <div class="export-area">
+       <ion-button class="export-button" (click)="exportResults()">Export</ion-button>
+     </div>
+
+   </div>
+
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label>IP</ion-label>
+        <ion-label slot="end">{{result.ipAddress}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Time</ion-label>
+        <ion-label slot="end">{{result.date | date:'short'}} </ion-label>
+      </ion-item>
+
+
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label>Phases</ion-label>
+        </ion-item-divider>
+
+        <ion-item style="height:120px;border:1px solid transparent;" >
+          <div class="total-item">
+            <div class="total-image-container">
+              <div class="circle-thing"></div>
+              <div class="line-in-circle"></div>
+            </div>
+            <div class="total-title">
+              <span class="heading">TOTAL</span>
+            </div>
+            <div class="results">
+              <ion-grid>
+                <ion-row>
+                  <ion-col> <span class="value">0.4 </span> <span class="unit">A</span> </ion-col>
+                  <ion-col class="ion-align-self-end"> <span class="value">50 </span> <span class="unit">W</span> </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col class="ion-align-self-end">
+                    <div >
+                      <span class="value">123 </span> <span class="unit">V</span>
+                    </div>
+                  </ion-col>
+                  <ion-col style="display: flex;flex-direction: row;justify-content: center;"> <span class="value">51 </span> <span class="unit">VA</span> </ion-col>
+                </ion-row>
+                <ion-row >
+                  <ion-col size="12" style="text-align:center;"><span class="value">0 </span> <span class="unit">kWh</span></ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </div>
+
+        </ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label>Circuits</ion-label>
+        </ion-item-divider>
+
+        <ion-item *ngFor="let result of result.breakerEntries">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="1">
+                <div class="circuit-number">
+                  {{result.breakerNumber}}
+                </div>
+              </ion-col>
+              <ion-col size="2" class="circuit-image" style="margin:0; padding:0;">
+                <div class="top-line"></div>
+                <div class="arc-container">
+                  <div class="arc"></div>
+                  <div class="half-arc-box"></div>
+                </div>
+                <div class="bottom-line"></div>
+              </ion-col>
+              <ion-col size="8">
+                <div>
+                  <span class="value">{{result.kiloWatts}}</span> <span class="unit">kWh</span>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-item-group>
+    </ion-list>
+
+  </div>
+
+  <ion-footer class="ion-no-border">
+    <ion-toolbar>
+      <ion-title>Results Saved</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="deleteResults()">
+          <ion-icon slot="icon-only" name="trash" class="standard-button" ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+
+
